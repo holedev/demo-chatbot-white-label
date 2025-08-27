@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web Chatbot White Label
 
-## Getting Started
+A customizable, white-label chatbot solution built with Next.js 15, React 19, TypeScript, and Tailwind CSS. This project provides a foundation for creating branded chatbot interfaces that can be easily customized for different clients and use cases.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Tech Stack**: Next.js 15 with React 19 and TypeScript
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Component Library**: Shadcn/ui components for consistent UI
+- **Real-time Branding**: Live dashboard with instant preview of branding changes
+- **White-label Ready**: Complete branding customization including colors, company name, messages, and styling
+- **Context-driven Architecture**: Centralized branding management via React Context
+- **Code Quality**: Biome for linting and formatting
+- **Performance**: Turbopack for fast development builds
+
+## 📋 Prerequisites
+
+Before getting started, ensure you have the following installed:
+
+- **Node.js**: Version 18.0 or higher
+- **pnpm**: Version 8.0 or higher (recommended package manager)
+- **Git**: For version control
+
+## 🛠️ Initial Setup
+
+### 1. Clone and Install Dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+git clone <your-repo-url>
+cd demo-chatbot-white-label
+
+# Install dependencies
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Development Server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Start the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm dev
+```
 
-## Learn More
+Your application will be available at [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Branding & Customization Guide
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Real-time Branding Dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project features a comprehensive branding system with live preview:
 
-## Deploy on Vercel
+1. **Visit `/dashboard`**: Access the real-time branding customization interface
+2. **Color Customization**: Modify primary colors with live preview
+3. **Brand Settings**: Update company name, welcome messages, and styling
+4. **Instant Updates**: All changes are immediately reflected in the chat interface
+5. **Export/Import**: Save and load branding configurations as JSON
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+demo-chatbot-white-label/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles and CSS variables
+│   ├── layout.tsx         # Root layout component
+│   ├── page.tsx           # Landing page
+│   ├── chat/              # Standalone chat interface
+│   │   └── page.tsx       # Chat page with BrandingProvider
+│   └── dashboard/         # Branding customization dashboard
+│       └── page.tsx       # Live branding dashboard
+├── components/            # Reusable React components
+│   ├── ui/               # Shadcn/ui components
+│   ├── chatbot/          # Chat interface components
+│   │   ├── chat-header.tsx    # Branded chat header
+│   │   ├── chat-interface.tsx # Main chat interface
+│   │   ├── chat-input.tsx     # Message input component
+│   │   ├── message.tsx        # Message display component
+│   │   └── index.ts          # Barrel exports
+│   └── dashboard/        # Branding customization components
+│       ├── color-customizer.tsx    # Color theming panel
+│       ├── branding-customizer.tsx # Brand settings panel
+│       ├── config-manager.tsx      # Import/export config
+│       └── index.ts               # Barrel exports
+├── lib/                  # Utility functions and contexts
+│   ├── utils.ts          # Common utilities
+│   └── contexts/         # React contexts
+│       └── branding-context.tsx # Centralized branding state
+├── public/               # Static assets
+├── components.json       # Shadcn/ui configuration
+├── next.config.ts        # Next.js configuration
+├── package.json          # Dependencies and scripts
+├── tailwind.config.js    # Tailwind CSS configuration
+└── tsconfig.json         # TypeScript configuration
+```
+
+## 🔧 Available Scripts
+
+```bash
+# Development
+pnpm dev                  # Start development server with Turbopack
+
+# Building
+pnpm build               # Build for production
+pnpm start               # Start production server
+
+# Code Quality
+pnpm lint                # Run Biome linter
+pnpm format              # Format code with Biome
+
+# Component Management
+pnpm dlx shadcn@latest add [component]  # Add Shadcn/ui components
+```
