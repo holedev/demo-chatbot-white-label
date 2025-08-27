@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ChatHeader } from "./chat-header";
-import { Message } from "./message";
-import { ChatInput } from "./chat-input";
 import { useBranding } from "@/lib/contexts/branding-context";
+import { ChatHeader } from "./chat-header";
+import { ChatInput } from "./chat-input";
+import { Message } from "./message";
 
 interface ChatMessage {
   id: string;

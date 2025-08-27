@@ -1,7 +1,7 @@
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 import { ChatInterface } from "@/components/chatbot";
 import { BrandingProvider } from "@/lib/contexts/branding-context";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 
 export default function ChatPage() {
   return (

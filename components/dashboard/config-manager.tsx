@@ -1,6 +1,8 @@
 "use client";
 
-import { useBranding } from "@/lib/contexts/branding-context";
+import { Check, Copy, Download, Upload } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,11 +10,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Download, Upload, Copy, Check } from "lucide-react";
-import { useState } from "react";
+import { Textarea } from "@/components/ui/textarea";
+import { useBranding } from "@/lib/contexts/branding-context";
 
 export function ConfigManager() {
   const { branding, exportBranding, importBranding, resetBranding } =

@@ -1,6 +1,7 @@
 "use client";
 
-import { useBranding } from "@/lib/contexts/branding-context";
+import { Building2, Upload } from "lucide-react";
+import { useState } from "react";
 import {
   Card,
   CardContent,
@@ -8,11 +9,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Upload, Building2 } from "lucide-react";
-import { useState } from "react";
+import { useBranding } from "@/lib/contexts/branding-context";
 
 export function BrandingCustomizer() {
   const { branding, updateBranding } = useBranding();
