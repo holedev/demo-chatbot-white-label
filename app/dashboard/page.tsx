@@ -1,16 +1,16 @@
 "use client";
 
-import { BrandingProvider } from "@/lib/contexts/branding-context";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ArrowLeft, Building2, Eye, Palette, Settings } from "lucide-react";
+import Link from "next/link";
+import { ChatInterface } from "@/components/chatbot";
 import {
-  ColorCustomizer,
   BrandingCustomizer,
+  ColorCustomizer,
   ConfigManager,
 } from "@/components/dashboard";
-import { ChatInterface } from "@/components/chatbot";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowLeft, Palette, Building2, Settings, Eye } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BrandingProvider } from "@/lib/contexts/branding-context";
 
 export default function DashboardPage() {
   return (

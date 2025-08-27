@@ -1,6 +1,7 @@
 "use client";
 
-import { useBranding } from "@/lib/contexts/branding-context";
+import { Palette, RotateCcw } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,11 +9,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-import { Button } from "@/components/ui/button";
-import { Palette, RotateCcw } from "lucide-react";
+import { useBranding } from "@/lib/contexts/branding-context";
 
 export function ColorCustomizer() {
   const { branding, updateBranding, resetBranding } = useBranding();

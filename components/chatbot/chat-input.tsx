@@ -1,9 +1,9 @@
 "use client";
 
+import { Paperclip, Send } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Send, Paperclip } from "lucide-react";
 
 interface ChatInputProps {
   onSendMessage: (message: string) => void;

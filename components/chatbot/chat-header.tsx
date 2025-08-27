@@ -1,8 +1,8 @@
 "use client";
 
+import { MessageSquare, MoreVertical, Trash2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, Trash2, MoreVertical } from "lucide-react";
 import { useBranding } from "@/lib/contexts/branding-context";
 
 interface ChatHeaderProps {
